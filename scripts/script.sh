@@ -10,6 +10,6 @@ fi
 $CABAL configure --enable-tests --enable-benchmarks -v2 $CABAL_FLAGS\
   && $CABAL build --ghc-options='-Wall -Werror'\
   && $CABAL test\
-  # && $DOCBUILD\ #this isn't working for now, so disable for now
+  && $DOCBUILD \ 
   && $CABAL check\
   && $CABAL sdist
