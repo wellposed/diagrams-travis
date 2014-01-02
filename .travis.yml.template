@@ -20,7 +20,7 @@ matrix:
     - env: GHCVER=head
 
 before_install:
-  - git clone http://github.com/diagrams/diagrams-travis travis
+  - git clone http://github.com/wellposed/wellposed-travis travis
   - source travis/scripts/set_env.sh
   - ./travis/scripts/before_install.sh
 
@@ -32,7 +32,9 @@ notifications:
   email: false
   irc:
     channels:
-      - "irc.freenode.org#diagrams"
+      - "irc.freenode.org#numerical-haskell" # for other langs, maybe other channels
+      - "irc.freenode.org#numerical"
+      - "irc.freenode.org#wellposed"
     skip_join: true
     template:
       - "\x0313<<<REPONAME>>>\x03/\x0306%{branch}\x03 \x0314%{commit}\x03 %{build_url} %{message}"
