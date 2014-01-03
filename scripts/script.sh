@@ -9,7 +9,6 @@ fi
 
 $CABAL configure --enable-tests --enable-benchmarks -v2 $CABAL_FLAGS\
   && $CABAL build --ghc-options='-Wall -Werror'\
-  && $CABAL test\
-  && $DOCBUILD\
+  && $CABAL test\  # removed $docbuildline 
   && $CABAL check\
   && $CABAL sdist
