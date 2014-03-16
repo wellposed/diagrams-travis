@@ -8,7 +8,7 @@ if [[ $GHCVER == "head" || -n "$SKIP_HADDOCK" ]]
 fi
 
 $CABAL configure --enable-tests --enable-benchmarks -v2 $CABAL_FLAGS\
-  && $CABAL build \
+  && $CABAL build\
   && $CABAL test\
-  && $CABAL check\
-  && $CABAL sdist
+  && $CABAL check  # \
+  # && $CABAL sdist
